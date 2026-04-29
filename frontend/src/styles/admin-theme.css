@@ -1,0 +1,131 @@
+:root {
+  --admin-bg: #f9fafb;
+  --admin-card-bg: #ffffff;
+  --admin-text-main: #1e293b;
+  --admin-text-sub: #64748b;
+  --admin-border: #f1f5f9;
+  --admin-primary: #3b82f6;
+  --admin-primary-soft: #eff6ff;
+  --admin-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  --admin-radius: 12px;
+}
+
+.admin-page {
+  padding: 4px;
+}
+
+.admin-card {
+  border-radius: var(--admin-radius);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow);
+}
+
+.admin-card .el-card__header {
+  background: #fcfdff;
+  border-bottom: 1px solid var(--admin-border);
+  padding: 14px 18px;
+}
+
+.admin-card .el-card__body {
+  padding: 16px 18px;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--admin-text-main);
+}
+
+.admin-subtitle {
+  font-size: 13px;
+  color: var(--admin-text-sub);
+}
+
+.admin-table-wrap {
+  border: 1px solid var(--admin-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-page .el-table th.el-table__cell {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+}
+
+.admin-page .el-table tr:hover > td.el-table__cell {
+  background: #f8fbff;
+}
+
+.admin-page .el-pagination {
+  margin-top: 14px;
+  justify-content: flex-end;
+}
+
+.admin-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-grid.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.admin-stat-card {
+  border-radius: 12px;
+  color: #fff;
+  padding: 16px;
+  min-height: 98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.admin-stat-card .label {
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.admin-stat-card .value {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+
+.admin-stat-blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.admin-stat-cyan {
+  background: linear-gradient(135deg, #06b6d4, #0e7490);
+}
+
+.admin-stat-emerald {
+  background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.admin-stat-violet {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+@media (max-width: 1200px) {
+  .admin-grid.two {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,40 @@
+server:
+  port: 8082
+
+app:
+  base-url: http://localhost:8082
+
+destination:
+  upload-dir: uploads/destination
+
+avatar:
+  upload-dir: uploads/avatar
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/,file:uploads/
+  application:
+    name: travel-recommendation
+  datasource:
+    url: jdbc:mysql://localhost:3306/travel_recommendation?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 645135
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.demo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+jwt:
+  secret: travelRecommendationSecretKey2026
+  expiration: 86400000
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+  allow-credentials: false

@@ -1,0 +1,1 @@
+import{r as e}from"./request-DS5xOw97.js";const a=()=>e({url:"/api/locations",method:"get"}),r=t=>e({url:`/api/locations/parent/${t}`,method:"get"}),n=t=>e({url:`/api/locations/level/${t}`,method:"get"});export{n as a,r as b,a as g};
